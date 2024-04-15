@@ -1,0 +1,7 @@
+langchain==0.1.14
+langchain-google-genai==1.0.1
+newspaper3k==0.2.8
+python-dotenv==1.0.1
+requests==2.31.0
+streamlit==1.33.0
+
