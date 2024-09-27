@@ -6,8 +6,8 @@ list_files = [
     "utils/__init__.py",
     "requirements.txt",
     "streamlit_app.py",
-    "experiments/experiments.ipynb"
-    "credential/config.toml"
+    "experiments/experiments.ipynb",
+    "credential/.env"
 ]
 
 
