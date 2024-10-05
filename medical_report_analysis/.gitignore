@@ -3,3 +3,4 @@ experiments/.ipynb_checkpoints*
 src/__*
 utils/__*
 test_images/__*
+temp_image*

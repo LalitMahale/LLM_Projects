@@ -1,12 +1,15 @@
 import fitz
 import os
 from PIL import Image
-from . import setting
+import setting
 import json
+import numpy as np
 
 
 class PDF_Processing:
-    
+    def __init__(self):
+        pass
+
     def pdf_to_image(file):
         """
         This function will take pdf file and convert first page into image and return it.
@@ -24,13 +27,15 @@ class PDF_Processing:
             pix = page.get_pixmap(matrix=fitz.Matrix(300/72, 300/72))  # 300 DPI
             image_bytes = pix.samples
             image = Image.frombytes("RGB", [pix.width, pix.height], image_bytes)
-            return image
+            image_np = np.array(image)
+
+            return image_np
         except Exception as e:
             print(e)
 
     def get_clean_json(text:str):
         """
-        This function will take text and return clean json.
+        This function will take text and ret
         """
 
         try:

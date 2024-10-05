@@ -1,2 +1,3 @@
 python-dotenv==1.0.1
 pymupdf==1.24.11
+easyocr==
