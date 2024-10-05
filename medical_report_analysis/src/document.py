@@ -2,6 +2,9 @@ import fitz
 import os
 from PIL import Image
 from . import setting
+import json
+
+
 class PDF_Processing:
     
     def pdf_to_image(file):
@@ -25,4 +28,13 @@ class PDF_Processing:
         except Exception as e:
             print(e)
 
+    def get_clean_json(text:str):
+        """
+        This function will take text and return clean json.
+        """
 
+        try:
+            text = text.replace("json","").replace("```","")
+            return json.loads(text)
+        except Exception as e:
+            print(e)
